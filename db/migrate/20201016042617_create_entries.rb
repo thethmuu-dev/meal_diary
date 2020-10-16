@@ -6,6 +6,7 @@ class CreateEntries < ActiveRecord::Migration[6.0]
       t.integer :proteins
       t.integer :carbohydrates
       t.integer :fats
+      t.references :user, index: true, foreign_key: true
 
       t.timestamps
     end

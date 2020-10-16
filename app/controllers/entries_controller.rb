@@ -1,9 +1,10 @@
 class EntriesController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_entry, only: [:show, :edit, :update, :destroy]
+  before_action :set_entry, only: %i[show edit update destroy]
+  before_action :owner_check, only: %i[edit update destroy]
 
   def index
-    @entries = Entry.all
+    @entries = Entry.where(user_id: current_user.id)
   end
 
   def show
@@ -16,13 +17,27 @@ class EntriesController < ApplicationController
 
   def create
     @entry = Entry.new(entry_params)
-    @entry.save
+    @entry.user = current_user
 
-    redirect_to entries_path, notice: 'Entry saved.'
+    if params[:back]
+      render :new
+    elsif @entry.save
+      redirect_to entries_path, notice: 'Entry saved.'
+    else
+      render :new
+    end
   end
 
   def edit
 
+  end
+
+  def update
+    if @entry.update(entry_params)
+      redirect_to @entry, notice: 'Entry updated.'
+    else
+      render 'edit'
+    end
   end
 
   def destroy
@@ -39,5 +54,12 @@ class EntriesController < ApplicationController
 
   def entry_params
     params.require(:entry).permit(:meal_type, :calories, :proteins, :carbohydrates, :fats, :category_id)
+  end
+
+  def owner_check
+    return unless current_user != @entry.user
+
+    flash[:alert] = 'You can only edit or delete your own entries'
+    redirect_to @entry
   end
 end
