@@ -2,11 +2,11 @@
 
 ## Overview
 
-Issue tracking service that specializes in tracking issues and bugs for the software projects. You can state issues and feature request.
+A person can add his/her meal log, set diet goals and share with other users
 
-### concept
+### Concept
 
-Issue Tracking System
+Record Meals of a person and share with others
 
 ### version
 
@@ -24,7 +24,7 @@ Ruby 2.6.6 Rails 6.0.3.4
 - [x] Entries list display function
 - [x] Create New Entry function
 
-## table definition
+## Table definition
 
 
 
