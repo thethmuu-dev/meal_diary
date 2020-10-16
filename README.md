@@ -10,7 +10,7 @@ Issue Tracking System
 
 ### version
 
-Ruby 2.6.5 Rails 5.2.4.4
+Ruby 2.6.6 Rails 6.0.3.4
 
 ## Catalog design
 
