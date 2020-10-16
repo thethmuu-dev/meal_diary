@@ -8,15 +8,15 @@ A person can add his/her meal log, set diet goals and share with other users
 
 Record Meals of a person and share with others
 
-### version
+### Version
 
 Ruby 2.6.6 Rails 6.0.3.4
 
-## Catalog design
+## Catalog Design
 
 
 
-## List of Functions
+## Functions List
 
 - [x] Login function
 - [x] User registration function
@@ -24,23 +24,23 @@ Ruby 2.6.6 Rails 6.0.3.4
 - [x] Entries list display function
 - [x] Create New Entry function
 
-## Table definition
+## Table Definition
 
 
 
-## ER diagram
+## ER Diagram
 
 
 
-## Screen transition diagram
+## Screen Transition Diagram
 
 
 
-## Screen wireframe
+## Screen Wireframe
 
 
 
-## Use predetermined gem
+## Used, Predetermined gem
 
 - letter_opener_web
 - devise
