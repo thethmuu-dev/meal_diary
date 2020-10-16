@@ -1,24 +1,46 @@
-# README
+# Meal Diary
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Overview
 
-Things you may want to cover:
+Issue tracking service that specializes in tracking issues and bugs for the software projects. You can state issues and feature request.
 
-* Ruby version
+### concept
 
-* System dependencies
+Issue Tracking System
 
-* Configuration
+### version
 
-* Database creation
+Ruby 2.6.5 Rails 5.2.4.4
 
-* Database initialization
+## Catalog design
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
+## List of Functions
 
-* ...
+- [x] Login function
+- [x] User registration function
+  - [x] Username, email, password required
+- [x] Entries list display function
+- [x] Create New Entry function
+
+## table definition
+
+
+
+## ER diagram
+
+
+
+## Screen transition diagram
+
+
+
+## Screen wireframe
+
+
+
+## Use predetermined gem
+
+- letter_opener_web
+- devise

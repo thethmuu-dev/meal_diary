@@ -1,31 +1,67 @@
-<section class="hero is-primary is-small">
-  <!-- Hero head: will stick at the top -->
-  <div class="hero-head">
-    <nav class="navbar">
-      <div class="container">
-        <div class="navbar-brand">
-          <%= link_to root_path, class: "navbar-item" do %>
-            <svg xmlns="http://www.w3.org/2000/svg" fill="#ffffff" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 15.546c-.523 0-1.046.151-1.5.454a2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.701 2.701 0 00-1.5-.454M9 6v2m3-2v2m3-2v2M9 3h.01M12 3h.01M15 3h.01M21 21v-7a2 2 0 00-2-2H5a2 2 0 00-2 2v7h18zm-3-9v-2a2 2 0 00-2-2H8a2 2 0 00-2 2v2h12z" />
-            </svg>
-            <span class="has-text-weight-bold is-size-4 ml-4">MealsDiary</span>
-          <% end %>
-          <span class="navbar-burger burger" data-target="navbarMenuHeroA">
-            <span></span>
-            <span></span>
-            <span></span>
-          </span>
-        </div>
-        <div id="navbarMenuHeroA" class="navbar-menu">
-          <div class="navbar-end">
-            <div class="navbar-item">
-                <%# <%= link_to "Create New Entry", new_entry_path, class: "button is-success" %> %>
-            </div>
-          </div>
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <%= link_to root_path, class: "navbar-item" do %>
+      <span class="has-text-weight-bold is-size-4 ml-4">MealDiary</span>
+    <% end %>
+
+    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarMenu" class="navbar-menu">
+    <div class="navbar-start">
+      <%= link_to "Home", root_path, class: "navbar-item" %>
+      
+      <%= link_to "Add Entry", new_entry_path, class: "navbar-item" %>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More
+        </a>
+
+        <div class="navbar-dropdown">
+          <a class="navbar-item">
+            About
+          </a>
+          <a class="navbar-item">
+            Jobs
+          </a>
+          <a class="navbar-item">
+            Contact
+          </a>
+          <hr class="navbar-divider">
+          <a class="navbar-item">
+            Report an issue
+          </a>
         </div>
       </div>
-    </nav>
+    </div>
+
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <% if user_signed_in? %>
+        <span class="has-text-weight-bold is-size-6 mr-4">Welcome, <%= current_user.username.capitalize %></span>
+        <% end %>
+        <div class="buttons">
+        <% if user_signed_in? %>
+          <%= link_to destroy_user_session_path, method: :delete, class: "button is-primary" do %>
+            <strong>Sign Out</strong>
+          <% end %>
+        <% else %>
+          <%= link_to "Sign Up", new_user_registration_path, class: "button is-light" %>
+          <%= link_to new_user_session_path, class: "button is-primary" do %>
+            <strong>Log In</strong>
+          <% end %>
+        <% end %>
+        </div>
+      </div>
+    </div>
   </div>
+</nav>
+<section class="hero is-primary is-small">
 
   <!-- Hero content: will be in the middle -->
   <div class="hero-body">
