@@ -6,7 +6,7 @@ A person can add his/her meal log, set diet goals and share with other users
 
 ### Concept
 
-Record Meals of a person and share with others
+Record meals of a person and share with others
 
 ### Version
 
@@ -37,6 +37,8 @@ https://docs.google.com/spreadsheets/d/1E1QcVsUx37SHG_OqxNnWS6tE8m5tFI168Ma6SG-k
 - [x] View Diet Goal
 - [x] View Diet Goal compared to today's total nutrients
 - [x] Diet Goal Edit, Delete Functions
+
+- User can search other user by email
 
 - User follow other users
 - User unfollow other users
