@@ -2,7 +2,11 @@
 
 ## Overview
 
-A person can add his/her meal log, set diet goals and share with other users
+People usually want to track their daily cosumed amount of nutrients. If they want to change their body weight or eating habits, it is a good things to have records of such things. And they should set a nutrient goal that is suitable for their body weight or health.
+
+This application can do the job of recording those and setting a goal and comparing the ideal amount and real amount of consument of a person. By this way, people can have a better overview their meal habits and can have a better control over them.
+
+Then, they can share their each meal for other people to let their friends know how they are trying to improve their health by taking care of eating habits.
 
 ### Concept
 
@@ -38,14 +42,14 @@ https://docs.google.com/spreadsheets/d/1E1QcVsUx37SHG_OqxNnWS6tE8m5tFI168Ma6SG-k
 - [x] View Diet Goal compared to today's total nutrients
 - [x] Diet Goal Edit, Delete Functions
 
-- User can search other user by email
+- [x] User can search other user by email
 
-- User follow other users
-- User unfollow other users
-- User can see entries from users who he/she follows
+- [x] User follow other users
+- [x] User unfollow other users
+- [x] User can see entries from users who he/she follows
 
-- User favourite other users' posts
-- User can view his/her favourited posts
+- [x] User favourite other users' posts
+- [x] User can view his/her favourited posts
 
 ## Table Definition
 
