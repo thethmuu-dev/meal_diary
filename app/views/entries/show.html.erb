@@ -15,9 +15,11 @@
     <nav class="panel is-primary">
       <p class="panel-heading">
         <%= @entry.meal_type %> :
+        <span class="tag is-light">
         <%# <%= @entry.category.title if @entry.category.present? %> %>
+        </span>
       </p>
-
+      
       <div class="panel-block">
         Calories: <%= @entry.calories %>
       </div>

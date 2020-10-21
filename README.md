@@ -6,7 +6,7 @@ People usually want to track their daily cosumed amount of nutrients. If they wa
 
 This application can do the job of recording those and setting a goal and comparing the ideal amount and real amount of consument of a person. By this way, people can have a better overview their meal habits and can have a better control over them.
 
-Then, they can share their each meal for other people to let their friends know how they are trying to improve their health by taking care of eating habits.
+Then, they can share their each meal with other people to let their friends know how they are trying to improve their health by taking care of eating habits.
 
 ### Concept
 
