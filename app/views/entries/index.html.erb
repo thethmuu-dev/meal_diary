@@ -23,7 +23,7 @@
             <% if entry.fats %>
             <p><span class="has-text-weight-bold"><%= entry.fats %></span> g (fat)</p>
             <% end %>
-            <p class="italic">Logged <%= time_ago_in_words(entry.created_at) %> ago</p>
+            <p class="is-size-7"><%= time_ago_in_words(entry.created_at) %> ago</p>
           </div>
         </div>
 
@@ -38,5 +38,5 @@
 </div>
 
 <div class="columns is-centered my-6">
-  <%= link_to "View All Entries", archives_index_path, class: "button is-black is-outlined is-centered" %>
+  <%= link_to "View All Entries", archives_index_path, class: "button is-primary has-text-weight-bold" %>
 </div>

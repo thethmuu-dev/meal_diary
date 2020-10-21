@@ -4,7 +4,7 @@ class EntriesController < ApplicationController
   before_action :owner_check, only: %i[edit update destroy]
 
   def index
-    @entries = Entry.where(user_id: current_user.id)
+    @entries = Entry.where(user_id: current_user.id).where('created_at >= ?', Date.today)
   end
 
   def show
