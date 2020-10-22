@@ -81,5 +81,5 @@ https://drive.google.com/file/d/13CTMcZgH4HZ7flIsm3IVmgqXzWVeFL33/view?usp=shari
 - carrierwave
 - mini_magick
 - rspec
-- will_paginate
+- pagy
 - animate.css-rails

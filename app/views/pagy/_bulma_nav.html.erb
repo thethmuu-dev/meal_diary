@@ -1,0 +1,17 @@
+<% link = pagy_link_proc(pagy) -%>
+<%#                            -%><nav class="pagy-bulma-nav pagination is-rounded is-centered" role="navigation" aria-label="pagination">
+<% if pagy.prev                -%>  <%== link.call(pagy.prev, pagy_t('pagy.nav.prev'), 'class="pagination-previous" aria-label="previous page"') %>
+<% else                        -%>  <a class="pagination-previous" disabled><%== pagy_t('pagy.nav.prev') %></a>
+<% end                         -%>
+<% if pagy.next                -%>  <%== link.call(pagy.next, pagy_t('pagy.nav.next'), 'class="pagination-next" aria-label="next page"') %>
+<% else                        -%>  <a class="pagination-next" disabled><%== pagy_t('pagy.nav.next') %></a>
+<% end                         -%>
+<%#                            -%>  <ul class="pagination-list">
+<% pagy.series.each do |item| # series example: [1, :gap, 7, 8, "9", 10, 11, :gap, 36] -%>
+<%   if    item.is_a?(Integer) -%>    <li><%== link.call item, item, %(class="pagination-link" aria-label="goto page #{item}") %></li>
+<%   elsif item.is_a?(String)  -%>    <li><%== link.call item, item, %(class="pagination-link is-current has-background-dark" aria-label="page #{item}" aria-current="page") %></li>
+<%   elsif item == :gap        -%>    <li><span class="pagination-ellipsis"><%== pagy_t('pagy.nav.gap') %></span></li>
+<%   end                       -%>
+<% end                         -%>
+<%#                            -%>  </ul>
+<%#                            -%></nav>

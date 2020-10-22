@@ -4,11 +4,11 @@ class EntriesController < ApplicationController
   before_action :owner_check, only: %i[edit update destroy]
 
   def index
-    @entries = Entry.where(user_id: current_user.id).where('created_at >= ?', Date.today)
+    @pagy, @entries = pagy(Entry.where(user_id: current_user.id)
+                                .where('created_at >= ?', Date.today), items: 4)
   end
 
   def show
- 
   end
 
   def new
