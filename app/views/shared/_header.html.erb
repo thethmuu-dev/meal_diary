@@ -16,28 +16,17 @@
       <%= link_to "Home", root_path, class: "navbar-item" %>
       
       <%= link_to "Add Entry", new_entry_path, class: "navbar-item" %>
-      
-      <%= link_to "Add Category", new_category_path, class: "navbar-item" %>
 
+      <%= link_to "View Archives", archives_index_path, class: "navbar-item" %>
+      
       <div class="navbar-item has-dropdown is-hoverable">
         <a class="navbar-link">
-          More
+          Categories
         </a>
 
         <div class="navbar-dropdown">
-          <a class="navbar-item">
-            About
-          </a>
-          <a class="navbar-item">
-            Jobs
-          </a>
-          <a class="navbar-item">
-            Contact
-          </a>
-          <hr class="navbar-divider">
-          <a class="navbar-item">
-            Report an issue
-          </a>
+          <%= link_to "Add New", new_category_path, class: "navbar-item" %>
+          <%= link_to "View All", categories_path, class: "navbar-item" %>
         </div>
       </div>
     </div>
