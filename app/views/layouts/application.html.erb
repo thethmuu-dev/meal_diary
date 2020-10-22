@@ -13,10 +13,10 @@
   <body>
     <%= render 'shared/header' %> 
     <% if notice.present? %>
-      <div class="notification is-link is-light"><%= notice %></div>
+      <div class="notification is-link is-light animated fadeIn"><%= notice %></div>
     <% end %>
     <% if alert.present? %>
-      <div class="notification is-link is-light"><%= alert %></div>
+      <div class="notification is-link is-light animated fadeIn"><%= alert %></div>
     <% end %>
     
     <div class="container">
@@ -29,7 +29,9 @@
       <% end %>
       <% end %>
 
-      <%= yield %>
+      <div class="animated fadeIn">
+        <%= yield %>
+      </div>
     </div>
   </body>
 </html>

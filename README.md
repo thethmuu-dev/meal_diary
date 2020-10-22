@@ -82,3 +82,4 @@ https://drive.google.com/file/d/13CTMcZgH4HZ7flIsm3IVmgqXzWVeFL33/view?usp=shari
 - mini_magick
 - rspec
 - will_paginate
+- animate.css-rails
