@@ -16,7 +16,7 @@ class CategoriesController < ApplicationController
 
   def create
     @category = Category.new(category_params)
-    @category.user = current_user
+    @category.user_id = current_user.id
 
     if params[:back]
       render :new
