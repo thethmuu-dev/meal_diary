@@ -1,13 +1,17 @@
 <%= form_with(model: category, local: true) do |form| %>
   <% if category.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(category.errors.count, "error") %> found</h2>
+    <div class="message is-danger">
+      <div class="message-header">
+        <h2><%= pluralize(category.errors.count, "error") %> found</h2>
+      </div>
 
-      <ul>
-        <% category.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
+      <div class="message-body">
+        <ul>
+          <% category.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
     </div>
   <% end %>
 
