@@ -27,6 +27,23 @@ class CategoriesController < ApplicationController
     end
   end
 
+  def edit
+  end
+
+  def update
+    if @category.update(category_params)
+      redirect_to @category, notice: 'Category updated.'
+    else
+      render 'edit'
+    end
+  end
+
+  def destroy
+    @category.destroy
+
+    redirect_to categories_path, notice: 'Category deleted.'
+  end
+
   private
 
   def set_category
@@ -38,7 +55,7 @@ class CategoriesController < ApplicationController
   end
 
   def owner_check
-    return unless current_user != @category.user
+    return unless current_user.id != @category.user_id
 
     flash[:alert] = 'You can only edit or delete your own categories'
     redirect_to @category
