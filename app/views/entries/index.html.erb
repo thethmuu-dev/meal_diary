@@ -7,7 +7,10 @@
     <div class="column is-one-quarter">
       <div class="card">
         <header class="card-header">
-          <p class="card-header-title"><%= entry.meal_type %></p>
+          <p class="card-header-title">
+            <%= entry.meal_type %>
+            <span class="tag ml-2 is-dark is-size-7"><%= entry.category.title if entry.category.present? %></span>
+          </p>
         </header>
         <div class="card-content">
           <div class="content">
@@ -38,5 +41,5 @@
 </div>
 
 <div class="columns is-centered my-6">
-  <%= link_to "View All Entries", archives_index_path, class: "button is-primary has-text-weight-bold" %>
+  <%= link_to "View All Entries", archives_index_path, class: "button is-primary is-outlined" %>
 </div>

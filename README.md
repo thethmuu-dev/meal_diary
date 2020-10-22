@@ -16,15 +16,22 @@ Record meals of a person and share with others
 
 Ruby 2.6.6 Rails 6.0.3.4
 
+### CSS Framework
+
+Bulma CSS 0.9.0
+
 ## Catalog Design
 
 https://docs.google.com/spreadsheets/d/1E1QcVsUx37SHG_OqxNnWS6tE8m5tFI168Ma6SG-k3N0/edit?usp=sharing
 
 ## Functions List
 
-- [x] Login function
+- [x] Admin Login function
+- [x] Show Users List to Admin
+
 - [x] User registration function
   - [x] username, email, password required
+- [x] User Login function
 
 - [x] Meal Records list view function
 - [x] Meal Record Create Function
