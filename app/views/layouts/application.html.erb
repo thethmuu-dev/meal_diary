@@ -14,10 +14,10 @@
   <body>
     <%= render 'shared/header' %> 
     <% if notice.present? %>
-      <div class="notification is-link is-light animated fadeIn"><%= notice %></div>
+      <div class="notification is-link is-light animated fadeIn has-text-centered"><%= notice %></div>
     <% end %>
     <% if alert.present? %>
-      <div class="notification is-link is-light animated fadeIn"><%= alert %></div>
+      <div class="notification is-link is-light animated fadeIn has-text-centered"><%= alert %></div>
     <% end %>
     
     <div class="container">

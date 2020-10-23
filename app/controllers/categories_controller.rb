@@ -4,7 +4,7 @@ class CategoriesController < ApplicationController
   before_action :owner_check, only: %i[edit update destroy]
 
   def index
-    @categories = Category.where(user_id: current_user.id).where('created_at >= ?', Date.today)
+    @categories = Category.where(user_id: current_user.id)
   end
 
   def show 
