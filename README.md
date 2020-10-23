@@ -27,7 +27,9 @@ https://docs.google.com/spreadsheets/d/1E1QcVsUx37SHG_OqxNnWS6tE8m5tFI168Ma6SG-k
 ## Functions List
 
 - [x] Admin Login function
+  - [x] Redirect to Admin Dashboard
 - [x] Show Users List to Admin
+- [x] Manage All Users
 
 - [x] User registration function
   - [x] username, email, password required
@@ -83,3 +85,5 @@ https://drive.google.com/file/d/13CTMcZgH4HZ7flIsm3IVmgqXzWVeFL33/view?usp=shari
 - rspec
 - pagy
 - animate.css-rails
+- rails_admin
+- cancancan
