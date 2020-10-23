@@ -34,7 +34,15 @@
     <div class="navbar-end">
       <div class="navbar-item">
         <% if user_signed_in? %>
-        <span class="has-text-weight-bold is-size-6 mr-4">Welcome, <%= current_user.username.capitalize %></span>
+        <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+        <span class="has-text-weight-bold is-size-6">Welcome, <%= current_user.username.capitalize %></span>
+        </a>
+
+        <div class="navbar-dropdown">
+          <%= link_to "Edit Profile", edit_user_registration_path, class: "navbar-item" %>
+        </div>
+      </div>
         <% end %>
         <div class="buttons">
         <% if user_signed_in? %>
