@@ -28,8 +28,10 @@ https://docs.google.com/spreadsheets/d/1E1QcVsUx37SHG_OqxNnWS6tE8m5tFI168Ma6SG-k
 
 - [x] Admin Login function
   - [x] Redirect to Admin Dashboard
-- [x] Show Users List to Admin
-- [x] Manage All Users
+- [x] Admin can view Users, Their Details and Delete them
+- [x] Admin can view Entries and Their Details
+- [x] Admin can view Categories and Their Details
+- [x] Admin can view Followers and Followings
 
 - [x] User registration function
   - [x] username, email, password required
@@ -56,9 +58,6 @@ https://docs.google.com/spreadsheets/d/1E1QcVsUx37SHG_OqxNnWS6tE8m5tFI168Ma6SG-k
 - [x] User follow other users
 - [x] User unfollow other users
 - [x] User can see entries from users who he/she follows
-
-- [x] User favourite other users' posts
-- [x] User can view his/her favourited posts
 
 ## Table Definition
 

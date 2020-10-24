@@ -10,8 +10,7 @@ class Ability
     if user.is_admin?
       can :access, :rails_admin # only allow admin users to access Rails Admin
       can :manage, :dashboard
-      can :manage, User
-    else
+      can :destroy, User
       can :read, :all
     end
     #
