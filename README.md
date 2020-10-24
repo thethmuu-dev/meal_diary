@@ -59,9 +59,6 @@ https://docs.google.com/spreadsheets/d/1E1QcVsUx37SHG_OqxNnWS6tE8m5tFI168Ma6SG-k
 - [x] User unfollow other users
 - [x] User can see entries from users who he/she follows
 
-- [x] User favourite other users' posts
-- [x] User can view his/her favourited posts
-
 ## Table Definition
 
 https://docs.google.com/spreadsheets/d/1ptK1vKi5qf0oK5B4Fd8iZgUJAXtJUQAZw6owjVWz498/edit?usp=sharing
