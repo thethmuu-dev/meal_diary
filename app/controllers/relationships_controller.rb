@@ -4,6 +4,7 @@ class RelationshipsController < ApplicationController
     @relationship = current_user.active_relationships.new(followed_id: @followed_user.id)
 
     @relationship.save
+    RelationshipMailer.follow_mail(@followed_user).deliver!
     flash[:notice] = "You just followed #{@followed_user.username}"
 
     redirect_back(fallback_location: root_path)
