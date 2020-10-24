@@ -8,6 +8,8 @@ Rails.application.routes.draw do
 
   resources 'categories'
   resources 'entries'
+  resources 'users', only: [:index]
+  resources 'relationships', only: %i[index create destroy]
   root 'entries#index'
 
 end

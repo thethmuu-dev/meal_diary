@@ -1,0 +1,27 @@
+<% content_for :title do %>
+  All Users
+<% end %>
+
+<div class="columns is-centered mt-3">
+    <div class="column is-half">
+        <table class="table is-hoverable is-fullwidth">
+          <thead>
+            <tr>
+              <th>Username</th>
+              <th>Email</th>
+              <th class="has-text-centered" colspan="2">Action</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <% @users.each do |user| %>
+              <tr>
+                <td><%= user.username %></td>
+                <td><%= user.email %></td>
+                <td><%= render 'follow_form', user: user %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+  </div>
+</div>
