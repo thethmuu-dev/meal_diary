@@ -3,9 +3,9 @@ Rails.application.routes.draw do
   get 'archives/index'
   devise_for :users
 
-  
   resources 'categories'
   resources 'entries'
+  resources 'diet_plan'
   resources 'users', only: [:index]
   resources 'relationships', only: %i[index create destroy]
   root 'home#index'
