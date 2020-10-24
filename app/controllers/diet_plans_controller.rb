@@ -21,7 +21,14 @@ class DietPlansController < ApplicationController
   end
 
   def edit
-    
+  end
+
+  def update
+    if @plan.update(plan_params)
+      redirect_to diet_plans_path, notice: 'Your Diet Goal Updated Successfully!'
+    else
+      render 'edit'
+    end
   end
 
   private
