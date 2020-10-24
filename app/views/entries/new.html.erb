@@ -2,6 +2,16 @@
   Add Entry
 <% end %>
 
+<% if Category.where(user_id: current_user.id).count.zero? %>
+  <div class="columns is-centered">
+    <div class="column is-one-third">
+      <div class="notification is-danger is-light animated fadeIn has-text-centered">
+        <%= link_to "Add", new_category_path, class: "is-link" %> Some Categories First!
+      </div>
+    </div>
+  </div>
+<% end %>
+
 <div class="columns is-centered">
     <div class="column is-one-third">
         <%= render 'form', entry: @entry %>
