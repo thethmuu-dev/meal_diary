@@ -10,6 +10,6 @@ Rails.application.routes.draw do
   resources 'entries'
   resources 'users', only: [:index]
   resources 'relationships', only: %i[index create destroy]
-  root 'entries#index'
+  root 'home#index'
 
 end

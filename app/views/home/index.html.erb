@@ -1,0 +1,34 @@
+<% content_for :title do %>
+  Entries of People You Follow
+<% end %>
+
+<div class="columns is-centered mt-5">
+    <div class="column is-half">
+        <% @followed_users.each do |user| %>
+            <% user.entries.each do |entry| %>
+                <%= link_to entry_path(entry) do %>
+                    <div class="card mb-5">
+                        <div class="card-content">
+                            <p class="subtitle is-6 is-italic mb-0">
+                                @<%= entry.user.username %>
+                                <span class="is-size-7 ml-3"><%= time_ago_in_words(entry.created_at) %> ago</span>
+                            </p><hr class="my-3">
+                            
+                            
+                            <strong><%= entry.meal_type %></strong><br>
+                            <%= entry.calories %> calories,
+                            <%= entry.proteins %> g proteins,
+                            <%= entry.carbohydrates %> g carbohydrates,
+                            <%= entry.fats %> g fat
+                        </div>
+                    </div>
+                <% end %>
+            <% end %>
+        <% end %>
+    </div>
+</div>
+<div class="columns is-centered mb-0">
+  <div class="column is-half">
+    <%== render partial: 'pagy/bulma_nav', locals: {pagy: @pagy} %>
+  </div>
+</div>

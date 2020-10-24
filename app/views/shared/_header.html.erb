@@ -17,8 +17,6 @@
       
       <%= link_to "Add Entry", new_entry_path, class: "navbar-item" %>
 
-      <%= link_to "View Archives", archives_index_path, class: "navbar-item" %>
-
       <%= link_to "View Users", users_path, class: "navbar-item" %>
       
       <div class="navbar-item has-dropdown is-hoverable">
@@ -42,7 +40,9 @@
         </a>
 
         <div class="navbar-dropdown">
-          <%= link_to "Edit Profile", edit_user_registration_path, class: "navbar-item" %>
+          <%= link_to "Edit Profile", edit_user_registration_path, class: "navbar-item pr-0" %>
+          <%= link_to "View Today Entries", entries_path, class: "navbar-item pr-0" %>
+          <%= link_to "View Archives", archives_index_path, class: "navbar-item pr-0" %>
         </div>
       </div>
         <% end %>
