@@ -2,7 +2,26 @@ class DietPlansController < ApplicationController
   before_action :set_diet_plan, only: %i[edit update destroy]
 
   def index
-    @paln = DietPlan.where(user_id: current_user.id).first
+    @plan = current_user.diet_plan
+  end
+
+  def new
+    @plan = DietPlan.new
+  end
+
+  def create
+    @plan = DietPlan.new(plan_params)
+    @plan.user = current_user
+
+    if @plan.save
+      redirect_to diet_plans_path, notice: 'Your Diet Goal Set Successfully!'
+    else
+      render :new
+    end
+  end
+
+  def edit
+    
   end
 
   private
@@ -12,6 +31,6 @@ class DietPlansController < ApplicationController
   end
 
   def plan_params
-    params.require(:plan).permit(:calories, :proteins, :carbohydrates, :fats)
+    params.require(:diet_plan).permit(:calories, :proteins, :carbohydrates, :fats)
   end
 end

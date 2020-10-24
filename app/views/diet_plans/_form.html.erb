@@ -1,0 +1,41 @@
+<%= form_with(model: plan, local: true) do |form| %>
+  <% if plan.errors.any? %>
+    <div class="message is-danger">
+      <div class="message-header">
+        <p><%= pluralize(plan.errors.count, "error") %> found</p>
+      </div>
+
+      <div class="message-body">
+        <ul>
+          <% plan.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :calories, class: "label" %>
+    <%= form.number_field :calories, class: "input", min: 0 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :proteins, class: "label" %>
+    <%= form.number_field :proteins, class: "input", min: 0 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :carbohydrates, class: "label" %>
+    <%= form.number_field :carbohydrates, class: "input", min: 0 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fats, class: "label" %>
+    <%= form.number_field :fats, class: "input", min: 0 %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit class: "button is-primary" %>
+  </div>
+<% end %>

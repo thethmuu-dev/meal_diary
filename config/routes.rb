@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
   resources 'categories'
   resources 'entries'
-  resources 'diet_plan'
+  resources 'diet_plans'
   resources 'users', only: [:index]
   resources 'relationships', only: %i[index create destroy]
   root 'home#index'
