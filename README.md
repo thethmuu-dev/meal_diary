@@ -31,32 +31,32 @@ https://docs.google.com/spreadsheets/d/1E1QcVsUx37SHG_OqxNnWS6tE8m5tFI168Ma6SG-k
 - [x] Admin can view Users, Their Details and Delete them
 - [x] Admin can view Entries and Their Details
 - [x] Admin can view Categories and Their Details
-- [x] Admin can view Followers and Followings <br\>
+- [x] Admin can view Followers and Followings
 
 - [x] User registration function
   - [x] username, email, password required
-- [x] User Login function <br\>
+- [x] User Login function
 
 - [x] Meal Records Today list view function
 - [x] Meal Record Create Function
   - [x] calories, proteins, carbohydrates, fats, meal_type, category_id required
 - [x] Meal Record Edit, Delete Functions
-- [x] Meal Records Overall Archives view function <br\>
+- [x] Meal Records Overall Archives view function
 
 - [x] Categories list view function
 - [x] Category Create Function
   - [x] category name required
-- [x] Category Edit, Delete Functions <br\>
+- [x] Category Edit, Delete Functions
 
 - [x] Set a Diet Goal Function
   - [x] calories, proteins, carbohydrates, fats required
 - [x] View Diet Goal
 - [x] View Diet Goal compared to today's total nutrients
-- [x] Diet Goal Edit Function <br\>
+- [x] Diet Goal Edit Function
 
 - [x] User follow other users
 - [x] User unfollow other users
-- [x] User can see entries from users who he/she follows <br\>
+- [x] User can see entries from users who he/she follows
 
 ## Table Definition
 
