@@ -37,10 +37,11 @@ https://docs.google.com/spreadsheets/d/1E1QcVsUx37SHG_OqxNnWS6tE8m5tFI168Ma6SG-k
   - [x] username, email, password required
 - [x] User Login function
 
-- [x] Meal Records list view function
+- [x] Meal Records Today list view function
 - [x] Meal Record Create Function
   - [x] calories, proteins, carbohydrates, fats, meal_type, category_id required
 - [x] Meal Record Edit, Delete Functions
+- [x] Meal Records Overall Archives view function
 
 - [x] Categories list view function
 - [x] Category Create Function
@@ -51,9 +52,7 @@ https://docs.google.com/spreadsheets/d/1E1QcVsUx37SHG_OqxNnWS6tE8m5tFI168Ma6SG-k
   - [x] calories, proteins, carbohydrates, fats required
 - [x] View Diet Goal
 - [x] View Diet Goal compared to today's total nutrients
-- [x] Diet Goal Edit, Delete Functions
-
-- [x] User can search other user by email
+- [x] Diet Goal Edit Function
 
 - [x] User follow other users
 - [x] User unfollow other users
@@ -73,7 +72,7 @@ https://drive.google.com/file/d/13CTMcZgH4HZ7flIsm3IVmgqXzWVeFL33/view?usp=shari
 
 ## Screen Wireframe
 
-
+https://docs.google.com/spreadsheets/d/1VebG7YPKTVHjBvSyb2uY_aVR6f3EJ84ekbGR71fkyb8/edit?usp=sharing
 
 ## Gem Predetermined to be Used
 
