@@ -1,0 +1,65 @@
+<% content_for :title do %>
+  Your Daily Diet Goal
+<% end %>
+
+<div class="columns is-centered">
+    <div class="column is-half">
+        <div class="my-4">
+            <% if @plan.present? %>
+            <nav class="level is-mobile">
+                <div class="level-item has-text-centered">
+                    <div>
+                        <p class="heading">Calories</p>
+                        <p class="title"><%= @plan.calories %></p>
+                    </div>
+                </div>
+                <div class="level-item has-text-centered">
+                    <div>
+                        <p class="heading">Proteins</p>
+                        <p class="title"><%= @plan.proteins %></p>
+                    </div>
+                </div>
+                <div class="level-item has-text-centered">
+                    <div>
+                        <p class="heading">Carbohydrates</p>
+                        <p class="title"><%= @plan.carbohydrates %></p>
+                    </div>
+                </div>
+                <div class="level-item has-text-centered">
+                    <div>
+                        <p class="heading">Fats</p>
+                        <p class="title"><%= @plan.fats %></p>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="columns">
+                    <div class="column has-text-centered">
+                        <%= link_to edit_diet_plan_path(@plan), class: "button is-primary" do %>
+                            <svg width="20px" viewBox="0 0 24 24" stroke="currentColor" fill-opacity="0" stroke-opacity="0.8">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            <span class="ml-1">Edit Goal</span>
+                        <% end %>
+                    </div>
+                </div>
+            <% else %>
+                <div class="notification is-warning has-text-centered">
+                    You haven't set your "Diet Goal" for one day.
+                    <p>Setting a diet goal can encourage you to take care of your eating habit.</p>
+                </div>
+
+                <div class="columns">
+                    <div class="column has-text-centered">
+                        <%= link_to new_diet_plan_path, class: "button is-primary" do %>
+                            <svg width="20px" viewBox="0 0 24 24" stroke="currentColor" fill-opacity="0" stroke-opacity="0.8">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            <span class="ml-1">Set Goal</span>
+                        <% end %>
+                    </div>
+                </div>
+            <% end %>
+        </div>
+    </div>
+</div>
