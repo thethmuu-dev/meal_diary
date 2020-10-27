@@ -21,6 +21,10 @@ gem 'pagy'
 gem 'rails_admin'
 
 gem 'cancancan'
+
+gem 'carrierwave'
+
+gem 'mini_magick'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
 gem 'webpacker', '~> 4.0'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks

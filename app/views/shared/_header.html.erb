@@ -54,9 +54,12 @@
     </div>
 
     <div class="navbar-end">
-      <div class="navbar-item">
-        <% if user_signed_in? %>
-        <div class="navbar-item has-dropdown is-hoverable">
+      
+      <% if user_signed_in? %>
+      <figure class="image is-48x48">
+        <%= image_tag(current_user.image.url, class: 'is-rounded') %>
+      </figure>
+      <div class="navbar-item has-dropdown is-hoverable">
         <a class="navbar-link">
         <span class="has-text-weight-bold is-size-6">Welcome, <%= current_user.username.capitalize %></span>
         </a>
@@ -68,7 +71,9 @@
           <%= link_to "View Archives", archives_index_path, class: "navbar-item pr-0" %>
         </div>
       </div>
-        <% end %>
+      <% end %>
+
+      <div class="navbar-item">
         <div class="buttons">
         <% if user_signed_in? %>
           <%= link_to destroy_user_session_path, method: :delete, class: "button is-primary" do %>
@@ -85,6 +90,7 @@
         <% end %>
         </div>
       </div>
+      
     </div>
   </div>
 </nav>
