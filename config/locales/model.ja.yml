@@ -1,0 +1,18 @@
+ja: 
+ activerecord: 
+ models: 
+ category: Category
+ user: User 
+ entry: Entry
+ attributes: 
+ category: 
+ title: Title 
+ user: 
+ username: Username 
+ email: Email Address 
+ current_password: Current Password 
+ password: Password 
+ password_confirmation: Confirmation Password 
+ remember_me: Remember Me
+ entry:
+ meal_type: Meal Type
