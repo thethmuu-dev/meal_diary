@@ -1,3 +1,139 @@
 <% content_for :title do %>
   Comparison
 <% end %>
+
+<%# Goal Block Start %>
+<div class="has-text-centered mb-4">
+  <span class="has-text-weight-semibold is-size-4">Your Goal</span>
+</div>
+
+<div class="columns is-centered">
+    <div class="column is-half">
+        <div class="mb-5">
+          <nav class="level is-mobile box">
+              <div class="level-item has-text-centered">
+                  <div>
+                      <p class="heading">Calories</p>
+                      <p class="title"><%= @plan.calories %></p>
+                  </div>
+              </div>
+              <div class="level-item has-text-centered">
+                  <div>
+                      <p class="heading">Proteins</p>
+                      <p class="title"><%= @plan.proteins %></p>
+                  </div>
+              </div>
+              <div class="level-item has-text-centered">
+                  <div>
+                      <p class="heading">Carbohydrates</p>
+                      <p class="title"><%= @plan.carbohydrates %></p>
+                  </div>
+              </div>
+              <div class="level-item has-text-centered">
+                  <div>
+                      <p class="heading">Fats</p>
+                      <p class="title"><%= @plan.fats %></p>
+                  </div>
+              </div>
+          </nav>
+                
+        </div>
+    </div>
+</div>
+<%# Goal Block End %>
+
+<%# Today Block Start %>
+<div class="has-text-centered mb-4">
+  <span class="has-text-weight-semibold is-size-4">Total Consumed Today</span>
+</div>
+
+<div class="columns is-centered">
+    <div class="column is-half">
+        <div class="mb-5">
+          <nav class="level is-mobile box">
+              <div class="level-item has-text-centered">
+                  <div>
+                      <p class="heading">Calories</p>
+                      <p class="title"><%= @today_total[0].calories %></p>
+                  </div>
+              </div>
+              <div class="level-item has-text-centered">
+                  <div>
+                      <p class="heading">Proteins</p>
+                      <p class="title"><%= @today_total[0].proteins %></p>
+                  </div>
+              </div>
+              <div class="level-item has-text-centered">
+                  <div>
+                      <p class="heading">Carbohydrates</p>
+                      <p class="title"><%= @today_total[0].carbohydrates %></p>
+                  </div>
+              </div>
+              <div class="level-item has-text-centered">
+                  <div>
+                      <p class="heading">Fats</p>
+                      <p class="title"><%= @today_total[0].fats %></p>
+                  </div>
+              </div>
+          </nav>
+                
+        </div>
+    </div>
+</div>
+<%# Today Block End %>
+
+<%# Progress Bars Start %>
+<div class="columns is-centered">
+  <div class="column is-two-thirds">
+    <div class="columns is-centered mb-0">
+      <div class="column">
+        <span>Calories</span>
+        <% if @today_total[0].calories > @plan.calories %>
+        <span class="tag is-warning">exceeded</span>
+        <% end %>
+      </div>
+      <div class="column is-two-thirds">
+        <progress class="progress is-primary" value="<%= @today_total[0].calories %>" max="<%= @plan.calories %>"></progress>
+      </div>
+    </div>
+    <div class="columns is-centered mb-0">
+      <div class="column">
+        <span>Proteins</span>
+        <% if @today_total[0].proteins > @plan.proteins %>
+        <span class="tag is-warning">exceeded</span>
+        <% end %>
+      </div>
+      <div class="column is-two-thirds">
+        <progress class="progress is-primary" value="<%= @today_total[0].proteins %>" max="<%= @plan.proteins %>"></progress>
+      </div>
+    </div>
+    <div class="columns is-centered mb-0">
+      <div class="column">
+        <span>Carbohydrates</span>
+        <% if @today_total[0].carbohydrates > @plan.carbohydrates %>
+        <span class="tag is-warning">exceeded</span>
+        <% end %>
+      </div>
+      <div class="column is-two-thirds">
+        <progress class="progress is-primary" value="<%= @today_total[0].carbohydrates %>" max="<%= @plan.carbohydrates %>"></progress>
+      </div>
+    </div>
+    <div class="columns is-centered mb-5">
+      <div class="column">
+        <span>Fats</span>
+        <% if @today_total[0].fats > @plan.fats %>
+        <span class="tag is-warning">exceeded</span>
+        <% end %>
+      </div>
+      <div class="column is-two-thirds">
+        <progress
+        class="progress is-primary"
+        value="<%= @today_total[0].fats %>"
+        max="<%= @plan.fats %>"
+        >
+        </progress>
+      </div>
+    </div>
+  </div>
+</div>
+<%# Progress Bars End %>

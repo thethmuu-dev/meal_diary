@@ -1,8 +1,14 @@
 class DietPlansController < ApplicationController
-  before_action :set_diet_plan, only: %i[edit update destroy]
+  before_action :set_diet_plan, only: %i[edit update destroy show]
 
   def index
     @plan = current_user.diet_plan
+  end
+
+  def show
+    @today_total = Entry.where(user_id: 7)
+                  .where('created_at >= ?', Date.today)
+                  .select('SUM(calories) AS calories,SUM(proteins) AS Proteins ,SUM(carbohydrates) AS carbohydrates, SUM(fats) AS fats')
   end
 
   def new
