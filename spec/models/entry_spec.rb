@@ -1,6 +1,8 @@
 require 'rails_helper'
 
 RSpec.describe Entry, type: :model do
+  let(:category){ FactoryBot.create(:category, title: 'Weight Gain') }
+
   describe 'Validation test' do
     context 'If the calories field is empty' do
       it 'Can\'t register an entry without calories' do
