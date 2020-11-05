@@ -1,5 +1,5 @@
 FactoryBot.define do
-  factory :category do
-    
+  factory :category1, class: Category do
+    title { 'Build Muscle' }
   end
 end

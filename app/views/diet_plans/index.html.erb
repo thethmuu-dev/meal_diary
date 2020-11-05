@@ -6,40 +6,50 @@
     <div class="column is-half">
         <div class="my-4">
             <% if @plan.present? %>
-            <nav class="level is-mobile">
-                <div class="level-item has-text-centered">
-                    <div>
-                        <p class="heading">Calories</p>
-                        <p class="title"><%= @plan.calories %></p>
+                <nav class="level is-mobile">
+                    <div class="level-item has-text-centered">
+                        <div>
+                            <p class="heading">Calories</p>
+                            <p class="title"><%= @plan.calories %></p>
+                        </div>
                     </div>
-                </div>
-                <div class="level-item has-text-centered">
-                    <div>
-                        <p class="heading">Proteins</p>
-                        <p class="title"><%= @plan.proteins %></p>
+                    <div class="level-item has-text-centered">
+                        <div>
+                            <p class="heading">Proteins</p>
+                            <p class="title"><%= @plan.proteins %></p>
+                        </div>
                     </div>
-                </div>
-                <div class="level-item has-text-centered">
-                    <div>
-                        <p class="heading">Carbohydrates</p>
-                        <p class="title"><%= @plan.carbohydrates %></p>
+                    <div class="level-item has-text-centered">
+                        <div>
+                            <p class="heading">Carbohydrates</p>
+                            <p class="title"><%= @plan.carbohydrates %></p>
+                        </div>
                     </div>
-                </div>
-                <div class="level-item has-text-centered">
-                    <div>
-                        <p class="heading">Fats</p>
-                        <p class="title"><%= @plan.fats %></p>
+                    <div class="level-item has-text-centered">
+                        <div>
+                            <p class="heading">Fats</p>
+                            <p class="title"><%= @plan.fats %></p>
+                        </div>
                     </div>
-                </div>
-            </nav>
+                </nav>
 
-            <div class="columns">
+                <div class="columns">
                     <div class="column has-text-centered">
                         <%= link_to edit_diet_plan_path(@plan), class: "button is-primary" do %>
                             <svg width="20px" viewBox="0 0 24 24" stroke="currentColor" fill-opacity="0" stroke-opacity="0.8">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                             </svg>
                             <span class="ml-1">Edit Goal</span>
+                        <% end %>
+                    </div>
+                </div>
+                <div class="columns">
+                    <div class="column has-text-centered ">
+                        <%= link_to diet_plan_path(@plan), class: "button is-primary" do %>
+                            <span class="mr-1">See Comparison</span>
+                            <svg width="20px" viewBox="0 0 20 20" fill="white">
+                                <path fill-rule="evenodd" d="M3 3a1 1 0 000 2v8a2 2 0 002 2h2.586l-1.293 1.293a1 1 0 101.414 1.414L10 15.414l2.293 2.293a1 1 0 001.414-1.414L12.414 15H15a2 2 0 002-2V5a1 1 0 100-2H3zm11 4a1 1 0 10-2 0v4a1 1 0 102 0V7zm-3 1a1 1 0 10-2 0v3a1 1 0 102 0V8zM8 9a1 1 0 00-2 0v2a1 1 0 102 0V9z" clip-rule="evenodd" />
+                            </svg>
                         <% end %>
                     </div>
                 </div>
