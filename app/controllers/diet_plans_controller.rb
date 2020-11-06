@@ -6,7 +6,7 @@ class DietPlansController < ApplicationController
   end
 
   def show
-    @today_total = Entry.where(user_id: 7)
+    @today_total = Entry.where(user_id: current_user.id)
                   .where('created_at >= ?', Date.today)
                   .select('SUM(calories) AS calories,SUM(proteins) AS Proteins ,SUM(carbohydrates) AS carbohydrates, SUM(fats) AS fats')
   end

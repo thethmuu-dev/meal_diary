@@ -9,5 +9,5 @@ Rails.application.routes.draw do
   resources 'users', only: [:index]
   resources 'relationships', only: %i[index create destroy]
   root 'home#index'
-  mount LetterOpenerWeb::Engine, at: '/inbox' if Rails.env.development?
+  mount LetterOpenerWeb::Engine, at: '/inbox'
 end
