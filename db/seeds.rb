@@ -4,13 +4,13 @@ User.create!(email: 'admin@gmail.com',
              password: 'adminadmin',
              is_admin: true)
 
-5.times do
-  username = Faker::Name.unique.first_name.downcase
-  email = "#{username}@gmail.com"
-  User.create!(email: email,
-               username: username,
-               password: 'password')
-end
+# 5.times do
+#   username = Faker::Name.unique.first_name.downcase
+#   email = "#{username}@gmail.com"
+#   User.create!(email: email,
+#                username: username,
+#                password: 'password')
+# end
 
 # categories seeder
 categories = ['Build Muscle', 'Body Fit', 'Weight Gain', 'Weight Loss']

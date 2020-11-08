@@ -17,17 +17,17 @@ ActiveRecord::Schema.define(version: 2020_10_27_032226) do
 
   create_table "categories", force: :cascade do |t|
     t.string "title"
-    t.bigint "user_id"
+    t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_categories_on_user_id"
   end
 
   create_table "diet_plans", force: :cascade do |t|
-    t.integer "calories"
-    t.integer "proteins"
-    t.integer "carbohydrates"
-    t.integer "fats"
+    t.integer "calories", null: false
+    t.integer "proteins", null: false
+    t.integer "carbohydrates", null: false
+    t.integer "fats", null: false
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -35,11 +35,11 @@ ActiveRecord::Schema.define(version: 2020_10_27_032226) do
   end
 
   create_table "entries", force: :cascade do |t|
-    t.string "meal_type"
-    t.integer "calories"
-    t.integer "proteins"
-    t.integer "carbohydrates"
-    t.integer "fats"
+    t.string "meal_type", null: false
+    t.integer "calories", null: false
+    t.integer "proteins", null: false
+    t.integer "carbohydrates", null: false
+    t.integer "fats", null: false
     t.bigint "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
