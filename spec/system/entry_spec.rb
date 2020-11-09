@@ -6,14 +6,12 @@ RSpec.feature "Entries", type: :feature do
     context "Add new Entry" do
       before(:each) do
         visit root_path
-        within("form") do
-          fill_in('Email', with: 'thet@gmail.com')
-          fill_in('Password', with: 'thetthet')
-          click_button "Log in"
-        end
+        fill_in('Email', with: 'thet@gmail.com')
+        fill_in('Password', with: 'thetthet')
+        click_button "Log in"
+        FactoryBot.create(:category1, user_id: 1)
       end
       it "New Entry is registered" do
-        # FactoryBot.create(:category1, user_id: 1)
         click_link "Add Entry"
         fill_in('Meal type', with: 'Lunch')
         fill_in('Calories', with: 150)
@@ -29,14 +27,12 @@ RSpec.feature "Entries", type: :feature do
     context "Edit a Entry" do
       before(:each) do
         visit root_path
-        within("form") do
-          fill_in('Email', with: 'thet@gmail.com')
-          fill_in('Password', with: 'thetthet')
-          click_button "Log in"
-        end
+        fill_in('Email', with: 'thet@gmail.com')
+        fill_in('Password', with: 'thetthet')
+        click_button "Log in"
+        FactoryBot.create(:category1, user_id: 1)
       end
       it "Entry is edited" do
-        # FactoryBot.create(:category1, user_id: 1)
         click_link "Add Entry"
         fill_in('Meal type', with: 'Lunch')
         fill_in('Calories', with: 150)
@@ -56,13 +52,11 @@ RSpec.feature "Entries", type: :feature do
     context 'Entry List Display' do
       before(:each) do
         visit root_path
-        within("form") do
-          fill_in('Email', with: 'thet@gmail.com')
-          fill_in('Password', with: 'thetthet')
-          click_button "Log in"
-        end
+        fill_in('Email', with: 'thet@gmail.com')
+        fill_in('Password', with: 'thetthet')
+        click_button "Log in"
         # Create a task for use in testing
-        # FactoryBot.create(:category1, user_id: 1)
+        FactoryBot.create(:category1, user_id: 1)
         click_link "Add Entry"
         fill_in('Meal type', with: 'Lunch')
         fill_in('Calories', with: 150)

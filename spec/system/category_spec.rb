@@ -4,6 +4,7 @@ RSpec.feature "Categories", type: :feature do
 
   describe "Category Management test" do
     context "Add new Category" do
+      FactoryBot.create(:user)
       before(:each) do
         visit root_path
         within("form") do
@@ -22,26 +23,32 @@ RSpec.feature "Categories", type: :feature do
 
     context "Edit a Category" do
       before(:each) do
+        # user = FactoryBot.create(:user)
         visit root_path
-        within("form") do
-          fill_in('Email', with: 'thet@gmail.com')
-          fill_in('Password', with: 'thetthet')
-          click_button "Log in"
-        end
-      end
-      it "Category is edited" do
-        FactoryBot.create(:category1, user_id: 1)
+        fill_in('Email', with: 'thet@gmail.com')
+        fill_in('Password', with: 'thetthet')
+        click_button "Log in"
+
+        category = FactoryBot.create(:category1)
         click_link "View All"
         click_link "Edit Item", match: :first
-        fill_in('Title', with: 'Build Muscle Edited')
-        click_button "Update Category"
+        within("form") do
+          fill_in('Title', with: 'Build Muscle Edited')
+          click_button "Update Category"
+        end 
+      end
+      it "Category is edited" do
         expect(page).to have_content("Build Muscle Edited")
       end
     end
 
     context 'Category List Display' do
-      # Create a task for use in testing
-      # category = FactoryBot.create(:category1, user_id: 1)
+      before(:each) do
+        visit root_path
+        fill_in('Email', with: 'thet@gmail.com')
+        fill_in('Password', with: 'thetthet')
+        click_button "Log in"
+      end
       it 'The created category list is displayed' do
         # Transition to task list page
         visit categories_path

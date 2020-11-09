@@ -5,11 +5,9 @@ RSpec.describe "DietPlans", type: :feature do
     context "Add new Diet Plan" do
       before(:each) do
         visit root_path
-        within("form") do
-          fill_in('Email', with: 'thet@gmail.com')
-          fill_in('Password', with: 'thetthet')
-          click_button "Log in"
-        end
+        fill_in('Email', with: 'thet@gmail.com')
+        fill_in('Password', with: 'thetthet')
+        click_button "Log in"
       end
       it "New Diet Plan is registered" do
         visit new_diet_plan_path
@@ -25,11 +23,9 @@ RSpec.describe "DietPlans", type: :feature do
     context "Edit a Diet Plan" do
       before(:each) do
         visit root_path
-        within("form") do
-          fill_in('Email', with: 'thet@gmail.com')
-          fill_in('Password', with: 'thetthet')
-          click_button "Log in"
-        end
+        fill_in('Email', with: 'thet@gmail.com')
+        fill_in('Password', with: 'thetthet')
+        click_button "Log in"
       end
       it "Diet Plan is edited" do
         visit new_diet_plan_path

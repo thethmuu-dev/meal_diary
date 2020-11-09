@@ -4,6 +4,10 @@ User.create!(email: 'admin@gmail.com',
              password: 'adminadmin',
              is_admin: true)
 
+User.create!(email: 'thet@gmail.com',
+             username: 'thet',
+             password: 'thetthet')
+
 # 5.times do
 #   username = Faker::Name.unique.first_name.downcase
 #   email = "#{username}@gmail.com"
