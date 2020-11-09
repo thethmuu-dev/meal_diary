@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.feature "Categories", type: :feature do
 
-  describe "Category registration test" do
+  describe "Category Management test" do
     context "Add new Category" do
       before(:each) do
         visit root_path
@@ -19,9 +19,7 @@ RSpec.feature "Categories", type: :feature do
         expect(page).to have_content("Category saved.")
       end
     end
-  end
-  
-  describe "Category edit test" do
+
     context "Edit a Category" do
       before(:each) do
         visit root_path
@@ -32,16 +30,26 @@ RSpec.feature "Categories", type: :feature do
         end
       end
       it "Category is edited" do
-        FactoryBot.create(:category1)
+        FactoryBot.create(:category1, user_id: 1)
         click_link "View All"
         click_link "Edit Item", match: :first
         fill_in('Title', with: 'Build Muscle Edited')
         click_button "Update Category"
-        expect(page).to have_content("Build Muscle")
+        expect(page).to have_content("Build Muscle Edited")
+      end
+    end
+
+    context 'Category List Display' do
+      # Create a task for use in testing
+      # category = FactoryBot.create(:category1, user_id: 1)
+      it 'The created category list is displayed' do
+        # Transition to task list page
+        visit categories_path
+        expect(page).to have_content 'Categories'
+        # Expect the result is true If the test is successful, if false, the result is output as a failure
       end
     end
   end
-  
 
 
 end
